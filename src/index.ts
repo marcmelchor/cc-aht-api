@@ -1,17 +1,13 @@
-import express, { Application } from 'express';
-
 import { environment } from './environments/environment';
-import routes from './routes';
+import express from 'express';
 
-const app: Application = express();
+import createServer from './utils/server';
 
-// Middlewares
-// app.use(express.json);
-app.use(express.urlencoded({extended: false}));
+const app: express.Application = createServer();
 
 const PORT: number = environment.port;
 
-app.use(routes);
+// app.use(routes);
 app.listen(PORT, (): void => {
   console.log(`Server running on port ${PORT}`);
 });
