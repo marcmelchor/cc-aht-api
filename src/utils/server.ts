@@ -3,7 +3,7 @@ import cors from 'cors';
 
 import routes from '../routes';
 
-function createServer(): express.Application {
+function createServer(): Application {
   const app: Application = express();
 
   // Middlewares

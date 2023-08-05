@@ -9,8 +9,8 @@
     "tsc": "rm -rf build/ && tsc && rm -rf build/__tests__",
     "test": "jest"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["EtLT-DAG", "Source", "Node", "express", "REST", "API"],
+  "author": "Marc Melchor <marc.melchor@outlook.com>",
   "license": "ISC",
   "devDependencies": {
     "@types/cors": "^2.8.13",
