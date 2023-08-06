@@ -9,7 +9,7 @@ export async function transformAndLoad(authToken: string): Promise<Response> {
       headers: {
         authorization: `Bearer ${authToken}`,
         'content-type': 'application/json',
-        'Accept': 'application/json'
+        'accept': 'application/json'
       },
       method: 'POST',
     }
