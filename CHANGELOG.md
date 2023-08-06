@@ -15,3 +15,9 @@ All notable changes to this project will be documented in this file.
 ### Added
 
 - Added testing functionalities.
+
+## [0.2.0] -- 2023.08.05
+
+### Added
+
+- `Authorization` middleware.
