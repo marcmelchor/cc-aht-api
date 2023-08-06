@@ -21,3 +21,4 @@ All notable changes to this project will be documented in this file.
 ### Added
 
 - `Authorization` middleware.
+- Integration functionality between the service `Source` and `Mini Transform & Load`.

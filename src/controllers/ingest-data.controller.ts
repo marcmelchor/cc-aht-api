@@ -1,13 +1,18 @@
 import { Request, Response } from 'express';
+import { transformAndLoad } from './transform-and-load.controller';
+import { environment } from '../environments/environment';
 
-export const ingestData = async (req: Request, res: Response): Promise<Response> => {
-  console.log('Hit endpoint!', req.body);
-  try {
-    // TODO: Send request to the 'Transform' and 'Sink'
-    return res.status(200).json({message: 'Ingest Data Endpoint'}).end();
-  } catch (error: any) {
-    // TODO: Standardize error messages
-    console.error(error);
-    return res.status(500).json({message: `Error ingesting data: ${error.message}`}).end();
+
+export const ingestData = async (_req: Request, res: Response): Promise<any> => {
+  const response: globalThis.Response = await transformAndLoad(environment.transportAndLoadToken);
+  const body = await response.json().then(body => body);
+  // TODO: The body is not really necessary, it was implemented in order to test the integration between micro-services
+  if (response.status === 200) {
+    return res
+      .status(200)
+      .send({message: body})
+      .end();
+  } else {
+    return res.status(400).json({message: 'response.message'}).end();
   }
 }
