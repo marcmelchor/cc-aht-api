@@ -1,8 +1,8 @@
 import { Request, Response } from 'express';
-// import { AxiosResponse } from 'axios';
 
 import { ingestData } from '../../controllers/ingest-data.controller';
 import * as services from '../../services/transform-and-load.service';
+// import * as controllers from '../../controllers/ingest-data.controller';
 
 
 describe('ingestData', (): void => {

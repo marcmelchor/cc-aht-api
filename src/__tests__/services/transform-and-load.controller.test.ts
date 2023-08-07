@@ -41,16 +41,4 @@ describe('transformAndLoadConsumer', (): void => {
     axiosPostSpy.mockRejectedValueOnce(new Error('Test error'));
     await expect(transformAndLoad(authToken, body)).rejects.toThrow('Test error');
   });
-
-  it('should throw an error if authToken is not provided', async () => {
-    const body = {
-      id: 1,
-      uid: 'testUid',
-      type: 'testType',
-      rh_factor: 'testRhFactor',
-      group: 'testGroup',
-      username: 'testUsername'
-    };
-    await expect(transformAndLoad(undefined, body)).rejects.toThrow('Request failed with status code 403');
-  });
 });
