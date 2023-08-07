@@ -47,12 +47,10 @@ Follow this steps to get `cc-aht-extract` up and running:
 
 Once the application is up and running, you can hit the API on `http://localhost:4001`.
 
-- Get the `DWH (Data Warehouse)` app and running, you can find it on `https://github.com/marcmelchor/cc-aht-dwh-psql`.
-- Get the `Transofrm and Sink` app and running, you can find it on `https://github.com/marcmelchor/cc-aht-transform-and-loading`.
-- Open your preferred `API platform` (e.g. Postman).
-- Create a new `POST` request with this uri `http://localhost:4001/ingest-data`.
-- In the `Authorization` section and a `Bearer Token` you can find it in `./src/environments/environment.ts` the attribute `authSourceToken`.
-- Send the request.
+- Get the `DWH (Data Warehouse)` app and running, you can find it on `https://github.com/marcmelchor/cc-aht-dwh-psql`
+- Get the `Business Transit` app and running, you can find it on `https://github.com/marcmelchor/cc-aht-business-transit`
+- Get the `Transofrm and Sink` app and running, you can find it on `https://github.com/marcmelchor/cc-aht-transform-and-loading`
+- Get the `Producer` app and running, you can find it on `https://github.com/marcmelchor/cc-aht-producer`
 
 
 ## Configuration
